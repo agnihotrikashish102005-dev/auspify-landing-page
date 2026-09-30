@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Auspify - Bring Future Through Tech. Developing modern, scalable digital solutions, cloud systems, and high-performance web applications.">
+  <meta name="keywords" content="Auspify, Tech, Software, Cloud, AI, Responsive Web, Engineering">
+  <title>Auspify — Bring Future Through Tech</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="container announcement-content">
+      <span class="badge-mini">NEW</span>
+      <span>🚀 Auspify 2.0 is live: Next-gen Cloud & AI Architecture.</span>
+      <a href="#solutions" class="announcement-link">Explore Updates &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Sticky Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Auspify Homepage">
+        <svg class="brand-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7 36L22 7L37 36H28.5L22 23L15.5 36H7Z" fill="url(#brand-grad-1)"/>
+          <path d="M16 27L22 15L28 27H16Z" fill="url(#brand-grad-2)"/>
+          <defs>
+            <linearGradient id="brand-grad-1" x1="7" y1="7" x2="37" y2="36" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0284c7" />
+              <stop offset="1" stop-color="#0f172a" />
+            </linearGradient>
+            <linearGradient id="brand-grad-2" x1="16" y1="15" x2="28" y2="27" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#38bdf8" />
+              <stop offset="1" stop-color="#06b6d4" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title">AUSPIFY</span>
+          <span class="brand-tagline">Bring Future Through Tech</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#workflow" class="nav-link">Workflow</a></li>
+          <li class="nav-item"><a href="#solutions" class="nav-link">Solutions</a></li>
+          <li class="nav-item"><a href="#stats" class="nav-link">Impact</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action Items: Theme Toggle & CTA -->
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle light or dark color mode" title="Toggle Dark/Light Mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <button class="btn btn-primary nav-cta-btn open-modal-btn">Get Started</button>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button id="menuToggle" class="menu-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="mobile-drawer-content">
+        <ul class="mobile-nav-list">
+          <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+          <li><a href="#features" class="mobile-nav-link">Features</a></li>
+          <li><a href="#workflow" class="mobile-nav-link">Workflow</a></li>
+          <li><a href="#solutions" class="mobile-nav-link">Solutions</a></li>
+          <li><a href="#stats" class="mobile-nav-link">Impact</a></li>
+          <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+          <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+        </ul>
+        <div class="mobile-drawer-actions">
+          <button class="btn btn-primary btn-block open-modal-btn">Get Started Free</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-shapes" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+
+      <div class="container hero-container">
+        <!-- Hero Copy -->
+        <div class="hero-copy animate-on-scroll">
+          <div class="hero-pill">
+            <span class="pill-dot"></span>
+            <span class="pill-text">Innovation Accelerated &bull; Next-Gen Tech</span>
+          </div>
+
+          <h1 class="hero-heading">
+            Bring Future <br>
+            <span class="gradient-text">Through Tech.</span>
+          </h1>
+
+          <p class="hero-subheading">
+            Auspify designs and engineers high-performance web applications, intelligent cloud infrastructures, and AI workflows tailored to supercharge forward-thinking organizations.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn btn-primary btn-lg open-modal-btn">
+              <span>Start Free Project</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="btn-icon" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+            <a href="#workflow" class="btn btn-secondary btn-lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon" aria-hidden="true">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Explore Workflow</span>
+            </a>
+          </div>
+
+          <div class="hero-social-proof">
+            <div class="avatar-stack">
+              <div class="avatar">JS</div>
+              <div class="avatar">AL</div>
+              <div class="avatar">RK</div>
+              <div class="avatar">MP</div>
+            </div>
+            <div class="social-proof-text">
+              <div class="stars">★★★★★</div>
+              <p>Loved by <strong>500+</strong> engineering teams worldwide</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Graphic / Mockup -->
+        <div class="hero-visual animate-on-scroll">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="mockup-title">auspify-core-cloud-cluster.tech</span>
+            </div>
+            <div class="mockup-body">
+              <div class="code-preview">
+                <code>
+                  <span class="token-keyword">import</span> { AuspifyEngine } <span class="token-keyword">from</span> <span class="token-string">'@auspify/core'</span>;<br><br>
+                  <span class="token-comment">// Initialize next-generation infrastructure</span><br>
+                  <span class="token-keyword">const</span> system = <span class="token-keyword">new</span> AuspifyEngine({<br>
+                  &nbsp;&nbsp;architecture: <span class="token-string">'serverless-edge'</span>,<br>
+                  &nbsp;&nbsp;scaling: <span class="token-string">'autonomous-ai'</span>,<br>
+                  &nbsp;&nbsp;performance: <span class="token-number">100</span><br>
+                  });<br><br>
+                  <span class="token-keyword">await</span> system.<span class="token-func">deployToFuture</span>();
+                </code>
+              </div>
+
+              <!-- Floating Live Metric Badges -->
+              <div class="floating-badge badge-top-right">
+                <div class="badge-icon-wrap cyan">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="badge-label">Latency</div>
+                  <div class="badge-val">8.4 ms &darr;</div>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-left">
+                <div class="badge-icon-wrap green">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="badge-label">Security Audit</div>
+                  <div class="badge-val">A+ Zero Trust</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUSTED LOGOS SECTION -->
+    <section class="trust-banner">
+      <div class="container">
+        <p class="trust-heading">POWERING STACKS ACROSS MODERN ENTERPRISES & STARTUPS</p>
+        <div class="logo-marquee">
+          <div class="logo-pill">CloudScale</div>
+          <div class="logo-pill">NextWave</div>
+          <div class="logo-pill">ApexLogic</div>
+          <div class="logo-pill">CyberGuard</div>
+          <div class="logo-pill">HyperData</div>
+          <div class="logo-pill">QuantumEdge</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION (Step 2: Responsive Sections) -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">KEY CAPABILITIES</span>
+          <h2 class="section-title">Built for Performance, Speed, & Resilience</h2>
+          <p class="section-subtitle">
+            A comprehensive suite of modern tech services engineered to turn bold ideas into high-yield digital realities.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature Card 1 -->
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon bg-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Responsive Web Design</h3>
+            <p class="feature-desc">
+              Fluid, pixel-perfect interfaces designed with responsive layouts and mobile-first principles to look flawless across all screens.
+            </p>
+            <a href="#solutions" class="feature-link">Learn more &rarr;</a>
+          </div>
+
+          <!-- Feature Card 2 -->
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon bg-cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Cloud Infrastructure</h3>
+            <p class="feature-desc">
+              Elastic, fault-tolerant cloud architecture deployed on automated CI/CD pipelines with multi-region high availability.
+            </p>
+            <a href="#solutions" class="feature-link">Learn more &rarr;</a>
+          </div>
+
+          <!-- Feature Card 3 -->
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon bg-indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">AI & Automation</h3>
+            <p class="feature-desc">
+              Intelligent agents, predictive ML models, and workflow automations that eliminate manual bottlenecks and accelerate velocity.
+            </p>
+            <a href="#solutions" class="feature-link">Learn more &rarr;</a>
+          </div>
+
+          <!-- Feature Card 4 -->
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon bg-emerald">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Ultra-Fast Optimization</h3>
+            <p class="feature-desc">
+              Blazing fast Core Web Vitals optimization, asset compression, and instant caching for sub-second page delivery.
+            </p>
+            <a href="#solutions" class="feature-link">Learn more &rarr;</a>
+          </div>
+
+          <!-- Feature Card 5 -->
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon bg-rose">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Zero-Trust Cybersecurity</h3>
+            <p class="feature-desc">
+              Rigorous data encryption, proactive threat scanning, and strict role-based access management protecting sensitive assets.
+            </p>
+            <a href="#solutions" class="feature-link">Learn more &rarr;</a>
+          </div>
+
+          <!-- Feature Card 6 -->
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon bg-purple">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Dedicated Engineering</h3>
+            <p class="feature-desc">
+              Partner with seasoned technical leads who collaborate directly with your team from whiteboard architecture to production.
+            </p>
+            <a href="#solutions" class="feature-link">Learn more &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKFLOW SECTION (Directly reflects Step 1 to Step 5) -->
+    <section class="section workflow-section" id="workflow">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">ENGINEERING LIFECYCLE</span>
+          <h2 class="section-title">A Proven 5-Step Execution Workflow</h2>
+          <p class="section-subtitle">
+            How Auspify transforms technical complexity into polished, intuitive, and reliable digital applications.
+          </p>
+        </div>
+
+        <div class="workflow-grid">
+          <div class="workflow-card animate-on-scroll">
+            <div class="workflow-num">01</div>
+            <h3 class="workflow-title">Design Page Layout</h3>
+            <p class="workflow-desc">
+              Blueprinting wireframes, user journeys, responsive visual hierarchies, and atomic design tokens before coding.
+            </p>
+          </div>
+
+          <div class="workflow-card animate-on-scroll">
+            <div class="workflow-num">02</div>
+            <h3 class="workflow-title">Create Responsive Sections</h3>
+            <p class="workflow-desc">
+              Structuring modular semantic HTML5 and modern CSS Grid & Flexbox containers adaptable to any viewport.
+            </p>
+          </div>
+
+          <div class="workflow-card animate-on-scroll">
+            <div class="workflow-num">03</div>
+            <h3 class="workflow-title">Navigation & Action Controls</h3>
+            <p class="workflow-desc">
+              Building sticky navigation bars, responsive mobile drawers, and high-visibility Call-To-Action entry points.
+            </p>
+          </div>
+
+          <div class="workflow-card animate-on-scroll">
+            <div class="workflow-num">04</div>
+            <h3 class="workflow-title">Implement Dynamic Animations</h3>
+            <p class="workflow-desc">
+              Enhancing engagement with smooth scroll triggers, hover states, micro-interactions, and visual feedback.
+            </p>
+          </div>
+
+          <div class="workflow-card animate-on-scroll">
+            <div class="workflow-num">05</div>
+            <h3 class="workflow-title">Optimize For Mobile Devices</h3>
+            <p class="workflow-desc">
+              Cross-browser tuning, touch ergonomics, fluid typography, and sub-second asset delivery on mobile networks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE SOLUTIONS SECTION (Interactive UI with Tabs) -->
+    <section class="section solutions-section" id="solutions">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">DYNAMIC SHOWCASE</span>
+          <h2 class="section-title">Tailored Solutions for Every Growth Stage</h2>
+          <p class="section-subtitle">
+            Explore how Auspify provides specialized software architecture matching specific organizational needs.
+          </p>
+        </div>
+
+        <!-- Tab Controls -->
+        <div class="tab-controls-wrap animate-on-scroll">
+          <div class="tab-buttons" role="tablist" aria-label="Solutions By Category">
+            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="startups">Startups</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="scaleups">Scale-ups</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="enterprise">Enterprise</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="ai-labs">AI Labs</button>
+          </div>
+        </div>
+
+        <!-- Tab Panes -->
+        <div class="tab-content-container animate-on-scroll">
+          <!-- Pane 1 -->
+          <div class="tab-pane active" id="tab-startups" role="tabpanel">
+            <div class="pane-grid">
+              <div class="pane-text">
+                <span class="badge-mini">RAPID MVP DELIVERY</span>
+                <h3>Go from Concept to Market in Weeks, Not Months</h3>
+                <p>
+                  We help agile founders validate concepts, build rapid high-converting prototypes, and launch production-grade web applications with modern architectures.
+                </p>
+                <ul class="checklist">
+                  <li>Rapid sprint turnarounds with continuous delivery</li>
+                  <li>Cost-effective serverless architecture setup</li>
+                  <li>Automated user onboarding & analytics instrumented</li>
+                </ul>
+                <button class="btn btn-primary open-modal-btn">Launch Startup Track</button>
+              </div>
+              <div class="pane-graphic">
+                <div class="metric-showcase-box">
+                  <div class="stat-highlight">4x</div>
+                  <div class="stat-sub">Faster MVP launch time to first revenue</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 2 -->
+          <div class="tab-pane" id="tab-scaleups" role="tabpanel">
+            <div class="pane-grid">
+              <div class="pane-text">
+                <span class="badge-mini">SCALING INFRASTRUCTURE</span>
+                <h3>Unblock High Growth With Zero Technical Debt</h3>
+                <p>
+                  As your user base explodes, Auspify refactors legacy bottlenecks into distributed, resilient services capable of supporting millions of concurrent interactions.
+                </p>
+                <ul class="checklist">
+                  <li>Zero-downtime database migrations & load balancing</li>
+                  <li>Automated autoscaling policies across multi-regions</li>
+                  <li>Observability, metrics, and distributed tracing</li>
+                </ul>
+                <button class="btn btn-primary open-modal-btn">Scale With Us</button>
+              </div>
+              <div class="pane-graphic">
+                <div class="metric-showcase-box">
+                  <div class="stat-highlight">10M+</div>
+                  <div class="stat-sub">Monthly active users supported seamlessly</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 3 -->
+          <div class="tab-pane" id="tab-enterprise" role="tabpanel">
+            <div class="pane-grid">
+              <div class="pane-text">
+                <span class="badge-mini">MISSION CRITICAL</span>
+                <h3>Security, Compliance & Multi-Tier Reliability</h3>
+                <p>
+                  Enterprise-grade platforms engineered with strict governance, zero-trust perimeter defense, SOC2 compliance roadmaps, and custom integrations.
+                </p>
+                <ul class="checklist">
+                  <li>Dedicated enterprise SLA and 24/7 incident response</li>
+                  <li>End-to-end data encryption in transit and at rest</li>
+                  <li>Unified SSO, SAML, and role-based access control</li>
+                </ul>
+                <button class="btn btn-primary open-modal-btn">Contact Enterprise Team</button>
+              </div>
+              <div class="pane-graphic">
+                <div class="metric-showcase-box">
+                  <div class="stat-highlight">99.999%</div>
+                  <div class="stat-sub">Strict high-availability enterprise uptime SLA</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 4 -->
+          <div class="tab-pane" id="tab-ai-labs" role="tabpanel">
+            <div class="pane-grid">
+              <div class="pane-text">
+                <span class="badge-mini">INTELLIGENCE LAYER</span>
+                <h3>Turn Raw Data into Predictive Autonomous Workflows</h3>
+                <p>
+                  Integrate cutting-edge Large Language Models, specialized retrieval-augmented generation (RAG) pipelines, and bespoke internal workflow automation.
+                </p>
+                <ul class="checklist">
+                  <li>Custom fine-tuned AI inference endpoints</li>
+                  <li>Vector database semantic search implementation</li>
+                  <li>Private on-premise or sovereign cloud deployments</li>
+                </ul>
+                <button class="btn btn-primary open-modal-btn">Deploy AI Solutions</button>
+              </div>
+              <div class="pane-graphic">
+                <div class="metric-showcase-box">
+                  <div class="stat-highlight">85%</div>
+                  <div class="stat-sub">Reduction in manual routine operational tasks</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE METRICS COUNTER SECTION -->
+    <section class="section stats-section" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item animate-on-scroll">
+            <div class="stat-number" data-target="99.9">0</div>
+            <span class="stat-unit">%</span>
+            <div class="stat-label">System Reliability</div>
+            <div class="stat-desc">Zero-downtime deployments</div>
+          </div>
+
+          <div class="stat-item animate-on-scroll">
+            <div class="stat-number" data-target="250">0</div>
+            <span class="stat-unit">+</span>
+            <div class="stat-label">Projects Shipped</div>
+            <div class="stat-desc">Across 18 international markets</div>
+          </div>
+
+          <div class="stat-item animate-on-scroll">
+            <div class="stat-number" data-target="10">0</div>
+            <span class="stat-unit">x</span>
+            <div class="stat-label">Deployment Speed</div>
+            <div class="stat-desc">Through automated cloud pipelines</div>
+          </div>
+
+          <div class="stat-item animate-on-scroll">
+            <div class="stat-number" data-target="98">0</div>
+            <span class="stat-unit">%</span>
+            <div class="stat-label">Client Retention</div>
+            <div class="stat-desc">Long-term strategic partnership</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">TESTIMONIALS</span>
+          <h2 class="section-title">What Tech Leaders Say About Auspify</h2>
+          <p class="section-subtitle">
+            Read authentic feedback from founders and engineering directors who partnered with us.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Auspify redefined how our engineering team delivers software. Their responsive design architectures and cloud expertise cut our load times by 70% and doubled user conversions."
+            </p>
+            <div class="author-info">
+              <div class="author-avatar">SC</div>
+              <div>
+                <h4 class="author-name">Sarah Chen</h4>
+                <p class="author-role">CTO at HyperScale Technologies</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Working with Auspify was seamless. They executed the exact 5-step workflow with surgical precision. Our responsive landing page looks breathtaking on mobile and desktop."
+            </p>
+            <div class="author-info">
+              <div class="author-avatar">DM</div>
+              <div>
+                <h4 class="author-name">David Miller</h4>
+                <p class="author-role">VP Product at Apex Innovations</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Their philosophy of 'Bring Future Through Tech' isn't just a slogan—it's tangible in every line of code, interactive animation, and architectural decision they make."
+            </p>
+            <div class="author-info">
+              <div class="author-avatar">EL</div>
+              <div>
+                <h4 class="author-name">Elena Rostova</h4>
+                <p class="author-role">Head of Engineering at NextWave Labs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (Interactive Accordion) -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">GOT QUESTIONS?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Everything you need to know about our responsive engineering and tech implementation process.
+          </p>
+        </div>
+
+        <div class="faq-accordion animate-on-scroll">
+          <!-- Accordion Item 1 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>What makes Auspify's landing page development different?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-content">
+                We combine semantic HTML5, fluid modern CSS Grid & Flexbox, and lightweight JavaScript to ensure ultra-fast load times, seamless responsiveness across all screen sizes, and accessible interactions.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>How do you optimize for mobile devices?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-content">
+                We implement mobile-first styling, dynamic viewport clamping, touch-friendly hit areas (minimum 44x44px), optimized SVG graphics, and responsive navigation drawers to guarantee ergonomic mobile navigation.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Are animations performant on low-end devices?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-content">
+                Yes! All animations utilize GPU-accelerated CSS properties (`transform` and `opacity`) and the `IntersectionObserver` API, preventing CPU throttling and respecting the user's `prefers-reduced-motion` settings.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Can we customize the brand colors, content, and sections?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-content">
+                Absolutely. The entire system is built with organized CSS custom variables (`:root`), meaning typography, primary accents, background colors, and layouts can be updated instantly.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION (CTA) BANNER -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-card animate-on-scroll">
+          <div class="cta-content">
+            <span class="badge-mini">TAKE THE NEXT STEP</span>
+            <h2 class="cta-title">Ready to Bring Your Future Through Tech?</h2>
+            <p class="cta-desc">
+              Join forward-thinking companies building resilient, responsive, and next-generation applications with Auspify.
+            </p>
+            
+            <form class="cta-subscribe-form" id="newsletterForm">
+              <div class="input-group">
+                <input type="email" id="emailInput" class="form-input" placeholder="Enter your work email..." required aria-label="Work email address">
+                <button type="submit" class="btn btn-primary">Get Consultation</button>
+              </div>
+              <p class="form-disclaimer">Zero spam. Unsubscribe at any time with one click.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <svg class="brand-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M7 36L22 7L37 36H28.5L22 23L15.5 36H7Z" fill="url(#footer-brand-grad)"/>
+            <defs>
+              <linearGradient id="footer-brand-grad" x1="7" y1="7" x2="37" y2="36" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#38bdf8" />
+                <stop offset="1" stop-color="#0284c7" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="brand-text">
+            <span class="brand-title">AUSPIFY</span>
+            <span class="brand-tagline">Bring Future Through Tech</span>
+          </div>
+        </div>
+        <p class="footer-mission">
+          Empowering organizations through modern software engineering, responsive digital interfaces, and resilient cloud architectures.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter / X" class="social-btn">𝕏</a>
+          <a href="#" aria-label="GitHub" class="social-btn">GH</a>
+          <a href="#" aria-label="LinkedIn" class="social-btn">in</a>
+          <a href="#" aria-label="YouTube" class="social-btn">yt</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#workflow">5-Step Workflow</a></li>
+          <li><a href="#solutions">Industry Solutions</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Technology</h4>
+        <ul class="footer-links">
+          <li><a href="#features">Responsive HTML & CSS</a></li>
+          <li><a href="#features">Mobile-First UI</a></li>
+          <li><a href="#features">Interactive JS Systems</a></li>
+          <li><a href="#features">Cloud & AI Integration</a></li>
+          <li><a href="#features">Web Performance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
+          <li><a href="#">About Auspify</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Kit</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; <span id="currentYear">2026</span> Auspify Inc. All rights reserved. Bring Future Through Tech.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Security</a>
+          <a href="#">System Status</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE MODAL DIALOG -->
+  <div class="modal-overlay" id="contactModal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="badge-mini">GET STARTED</span>
+        <h3 id="modalTitle">Launch Your Auspify Project</h3>
+        <p>Fill out the details below and our technical leads will reach out within 24 hours.</p>
+      </div>
+
+      <form id="projectModalForm" class="modal-form">
+        <div class="form-group">
+          <label for="modalFullName" class="form-label">Full Name</label>
+          <input type="text" id="modalFullName" class="form-input" placeholder="e.g. Alex Morgan" required>
+        </div>
+
+        <div class="form-group">
+          <label for="modalEmail" class="form-label">Work Email</label>
+          <input type="email" id="modalEmail" class="form-input" placeholder="alex@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="modalService" class="form-label">Primary Interest</label>
+          <select id="modalService" class="form-input form-select" required>
+            <option value="" disabled selected>Select an area...</option>
+            <option value="responsive-landing">Responsive Landing Page & Web UI</option>
+            <option value="cloud-arch">Cloud Architecture & DevOps</option>
+            <option value="ai-solutions">AI & Workflow Automation</option>
+            <option value="performance">Speed & Performance Tuning</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="modalMessage" class="form-label">Project Details / Goals</label>
+          <textarea id="modalMessage" class="form-input form-textarea" rows="3" placeholder="Tell us about your objectives, timeline, or requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Submit Project Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
