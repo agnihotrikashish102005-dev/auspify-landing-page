@@ -56,7 +56,6 @@ Double click `index.html` or open it with any web browser (Chrome, Edge, Firefox
 ### Option 2: Local HTTP Server (Python)
 Run the following in PowerShell / Terminal:
 ```bash
-cd "C:\Users\ACER\.gemini\antigravity\scratch\auspify-landing-page"
 python -m http.server 3000
 ```
 Then visit `http://localhost:3000` in your web browser.
